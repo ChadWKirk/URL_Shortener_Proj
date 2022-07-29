@@ -1,0 +1,28 @@
+{
+  "name": "url_shortener_proj",
+  "version": "1.0.0",
+  "description": "Making a URL Shortener with HTML, CSS, JS, JSON, Express, MongoDB, and EJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChadWKirk/URL_Shortener_Proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChadWKirk/URL_Shortener_Proj/issues"
+  },
+  "homepage": "https://github.com/ChadWKirk/URL_Shortener_Proj#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

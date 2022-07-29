@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public\css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <main>
+        <div id="title">URL Shortener</div>
+        <div id="box">
+            <div id="subtitle">Paste The URL To Be Shortened</div>
+            <form action="" method="post" id="input-sect">
+                <label for="fullURL"></label>
+                <input type="url" name="fullURL" id="fullURL" placeholder="Enter the link here">
+                <button type="submit">Shorten URL</button>
+            </div>            
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Full URL
+                    </th>
+                    <th>
+                        Short URL
+                    </th>
+                    <th>
+                        Clicks
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://www.youtube.com/">https://www.youtube.com/</a>
+                    </td>
+                    <td>
+                        <a href="/123456">123456</a>
+                    </td>
+                    <td>
+                        10
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
