@@ -37,17 +37,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <a href="https://www.youtube.com/">https://www.youtube.com/</a>
-                    </td>
-                    <td>
-                        <a href="/123456">123456</a>
-                    </td>
-                    <td>
-                        10
-                    </td>
-                </tr>
+                <% shortUrls.forEach(shortUrl => { %>
+                    <tr>
+                        <td>
+                            <a href="<%= shortUrl.full %>"></a>>https://www.youtube.com/</a>
+                        </td>
+                        <td>
+                            <a href="/123456">123456</a>
+                        </td>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                <% }) %>                
             </tbody>
         </table>
     </main>

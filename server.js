@@ -12,12 +12,14 @@ app.use('/public', express.static('public')); //instead of app.use(express.stati
 app.set('view engine', 'ejs'); //use ejs
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-    res.render('index'); //get index.ejs on the screen
+app.get('/', async (req, res) => {
+    const shortUrls = await ShortUrl.find();
+    res.render('index', { shortUrls: shortUrls }); //get index.ejs on the screen
 });
 
-app.post('/shortUrls', (req, res) => {
-    ShortUrl.create({ full: req.body.fullUrl })
+app.post('/shortUrls', async (req, res) => {
+    await ShortUrl.create({ full: req.body.fullUrl })
+    res.redirect('/')
 });
 
 app.listen(process.env.PORT || 5000); //communicate thru port 5000
