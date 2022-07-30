@@ -40,13 +40,13 @@
                 <% shortUrls.forEach(shortUrl => { %>
                     <tr>
                         <td>
-                            <a href="<%= shortUrl.full %>"></a>>https://www.youtube.com/</a>
+                            <a href="<%= shortUrl.full %>"><%=shortUrl.full %></a>
                         </td>
                         <td>
-                            <a href="/123456">123456</a>
+                            <a href="<%= shortUrl.short %>"><%= shortUrl.short %></a>
                         </td>
                         <td>
-                            10
+                            <%= shortUrl.clicks %>
                         </td>
                     </tr>
                 <% }) %>                
