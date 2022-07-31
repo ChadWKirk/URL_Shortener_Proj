@@ -15,9 +15,8 @@
         <div id="title">URL Shortener</div>
         <div id="box">
             <div id="subtitle">Paste The URL To Be Shortened</div>
-            <form action="/shortUrls" method="post" id="input-sect">
-                <label for="fullURL"></label>
-                <input type="url" name="fullURL" id="fullURL" placeholder="Enter the link here">
+            <form action="/shortUrls" method="POST" id="input-sect">
+                <input type="url" name="fullUrl" id="fullUrl" placeholder="Enter the link here">
                 <button type="submit">Shorten URL</button>
             </div>            
         </div>
@@ -25,29 +24,17 @@
         <table>
             <thead>
                 <tr>
-                    <th>
-                        Full URL
-                    </th>
-                    <th>
-                        Short URL
-                    </th>
-                    <th>
-                        Clicks
-                    </th>
+                    <th>Full URL</th>
+                    <th>Short URL</th>
+                    <th>Clicks</th>
                 </tr>
             </thead>
             <tbody>
                 <% shortUrls.forEach(shortUrl => { %>
                     <tr>
-                        <td>
-                            <a href="<%= shortUrl.full %>"><%=shortUrl.full %></a>
-                        </td>
-                        <td>
-                            <a href="<%= shortUrl.short %>"><%= shortUrl.short %></a>
-                        </td>
-                        <td>
-                            <%= shortUrl.clicks %>
-                        </td>
+                        <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                        <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                        <td><%= shortUrl.clicks %></td>
                     </tr>
                 <% }) %>                
             </tbody>
